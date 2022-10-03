@@ -1,0 +1,45 @@
+﻿@using Do_Again.viewModels
+@model LoginViewModels
+
+@{
+    ViewBag.Title = "User Login";
+}
+<head>
+         <link rel="stylesheet" href="~/css/login.css" />
+</head>
+<div class="row page-content-row">
+    <div class="col-md-6">
+      
+       
+        <form method="post"  class="for_forms">
+              
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label asp-for="RememberMe">
+                        <input asp-for="RememberMe" />
+                        @Html.DisplayNameFor(m => m.RememberMe)
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <div>
+                <a asp-action="ForgotPassword">Forgot Password?</a>
+            </div>
+        </form>
+    </div>
+
+    
+        
+    </div>

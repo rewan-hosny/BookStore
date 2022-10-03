@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Do_Again.Models.Book>
+@using Do_Again.Controllers
+@using Microsoft.AspNetCore.Identity
+
+
+@inject SignInManager<IdentityUser> signInManager;
+<head>
+         <link rel="stylesheet" href="~/css/indexlist.css" />
+</head>
+
+                           <form class="form-inline my-2 my-lg-0" asp-action="Search" asp-controller="Home">
+                <input class="form-control mr-sm-2 input_search" name="term" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0  btn-search" type="submit"><i class="fa fa-search" style="color: #0a3d64;"></i></button>
+            </form>
+@if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {
+<p>
+    <a class="btn btn-bink" asp-action="Create">Create New</a>
+</p>
+                    }
+  <div class="card-group align-items-center">
+        @foreach (var book in Model)
+              {  var photoPath = "~/Image/Book/" + (book.Photopath ?? "noimage.jpg");
+                <div class="card m-3 booklist glasscart " style="min-width: 18rem; max-width:30.5%;border-radius:2rem;">
+                  
+                    <div class="booklist-book">
+                        <div class="booklist-book_cover-wrapper">
+                            <a class="booklist-book_cover" asp-controller="home" asp-action="details"asp-route-id="@book.Id">
+                                <div class="product-image">
+                                                        
+                                <div class="d-flex align-items-center flex-column justify-content-center btnproce rounded-pill height-75 width-75 text-lh-1 text-white offer">
+                                            <!-- <span class="font-size-12">Save</span> -->
+                                            <div class="font-size-14 font-weight-bold">
+                                                <!--150 EGP-->
+                                              @book.Price EGP
+                                            </div>
+                                        </div>
+                                           <img class="card-img-top w-full"style="border-radius: 2rem;"
+                     src="@photoPath"  asp-append-version="true" />
+             
+                                </div>
+                            </a>
+                            </div>
+                    
+                      <div class="card-body">
+                        <h2 class="card-text "style="height: 40px"><a  asp-controller="home" class="fon" asp-action="details"asp-route-id="@book.Id">@book.Name</a></h2>
+                    </div>
+                    
+                    <div class="card-footer text-center">
+  
+                     
+                          <a class="btn btn-bink btn-lg-cart mx-auto d-table mb-10 mrg"
+                                   asp-controller="Order" 
+                                   asp-action="AddItemToShoppingCart" 
+                                   asp-route-id="@book.Id">
+                                <i class="fa-solid fa-cart-shopping "></i> Add to Cart</a>
+                                     @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {   
+                        <a  asp-controller="home" asp-action="edit"asp-route-id="@book.Id" >Edit Book</a>
+                    }
+                </div>
+                </div>
+                </div>
+                
+
+              }
+          
+      </div>
+  
