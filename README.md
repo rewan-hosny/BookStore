@@ -19,4 +19,6 @@ This e-commerce web application , Administrators have a panel where they can man
 
 ## when an Admin login in the websit
 
+When Admin enters, he is responsible for the process of adding books, managing users, and deleting and modifying the product, so additional buttons appear to him that did not appear to the user.
+
 ![This is an image](Do_Again/wwwroot/image/ADMIN.png)
