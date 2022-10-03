@@ -25,4 +25,7 @@ When Admin enters, he is responsible for the process of adding books, managing u
 
 # Responsive
 I made the site compatible with all sizes and I can use it on all devices of different sizes
+
+
+
 ![This is an image](Do_Again/wwwroot/image/phone.png)
