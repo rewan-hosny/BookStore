@@ -29,3 +29,14 @@ I made the site compatible with all sizes and I can use it on all devices of dif
 
 
 ![This is an image](Do_Again/wwwroot/image/phone.png)
+
+
+# Built with
+* HTML 5
+* CSS 
+* Javascript
+* Jquery
+* .NET Core 3.1
+* Entity Framework Core
+* Micorsoft SQL Server
+* Bootstrap
