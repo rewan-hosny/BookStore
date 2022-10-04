@@ -6,7 +6,7 @@ body {
 .imageThumbnail {
     height: 200px;
     width: 200px;
-   background-color:
+  
 }
 .main-header {
     background-color: rgba(22,34,57,0.95) ;
@@ -230,7 +230,7 @@ element.style {
     }
 
 .text-gray-100 {
-    color: #ECD4EA;
+    color: #c31111;
 }
 
     .prodcut-add-cart {
