@@ -1,5 +1,5 @@
 # Project Title
-BookStore (my website name is YourBooks)
+BookStore (my website name is BS)
 
 
 # BookStore
