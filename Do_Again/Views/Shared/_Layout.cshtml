@@ -1,0 +1,214 @@
+﻿@using Do_Again.Controllers
+@using Microsoft.AspNetCore.Identity
+
+
+@inject SignInManager<IdentityUser> signInManager;
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Do_Again</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  
+
+        <link rel="stylesheet" href="~/css/flex-slider.css" />
+        <link rel="stylesheet" href="~/font-awesome/css/fontawesome.css" />
+         <link rel="stylesheet" href="~/font-awesome/css/all.css" />
+          <link rel="stylesheet" href="~/font-awesome/css/brands.css" />
+           <link rel="stylesheet" href="~/font-awesome/css/solid.css" />
+            <link rel="stylesheet" href="~/font-awesome/css/regular.css" />
+   
+         <link rel="stylesheet" href="~/css/owl.css" />
+          <link rel="stylesheet" href="~/css/templatemo-cyborg-gaming.css"/>
+                   <link rel="stylesheet" href="~/css/indexlist.css"/>
+  
+            <link rel="stylesheet" href="~/css/site.css"/>
+</head>
+
+<body>
+
+      <header class="header-area" >
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar">
+                    <div class="logo">
+      <a style="
+ color: #c31111
+;
+    font-size: 30px;
+"href="#"><em style="
+    font-size: 30px;
+    color: #0a3d64;">Your</em> Books</a>
+    </div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+
+
+
+
+                    <!-- ***** Logo Start ***** -->
+              
+                    <!-- ***** Logo End ***** -->
+                  
+                    <!-- ***** Menu Start ***** -->
+
+                     <div class="navbar-links">
+                    <ul>
+                             <li class="nav-username ">@User.Identity.Name</li>
+                        <li> <a  asp-controller="Home" asp-action="Index">Home</a></li>
+                   
+                            @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                    {
+                        <li class=" dropdown" >
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Manage
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" asp-controller="Administration"
+                                   asp-action="ListOfUser">Users</a>
+                                <a class="dropdown-item" asp-controller="Administration"
+                                   asp-action="ListOfRole">Roles</a>
+                               
+                            </div>
+                        </li>
+                    }
+ 
+              
+                           @if (signInManager.IsSignedIn(User))
+                    {  
+                        <li class=" "style=" color: #e3b5d8c9;">
+                            <form method="post" asp-action="logout" asp-controller="account">
+                                <button type="submit" class="nav-link btn btn-link-color"
+                                        style="width:auto">
+                                    Logout 
+                                </button>
+                            </form>
+                        </li>
+                       
+                    }
+                    else{
+                                 <li>
+                          <a asp-controller="account" asp-action="login" y> LogIn</a>
+                      </li>
+                     
+                        <li>
+                          <a asp-controller="account" asp-action="register" > Register</a>
+                      </li>
+                     
+                    }
+                 
+                  
+                    </ul>  
+                  
+                    </div>
+                  
+                    <!-- ***** Menu End ***** -->
+                </nav>
+                 <nav class="navbar mb-3 navbar-expand-sm secondnav"style="  background-color: #0a3d64 ;z-index:1">
+                    
+            <div class="container">
+            
+                                   <div class="logo">
+ 
+ <a style="color: #fff;
+    font-size: 25px;" asp-controller="Home" asp-action="Index"> Categories</a>
+
+    </div>
+                   <a href="#" class="toggle-button1">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+                <div class="navbar-links1">
+                    <ul class="navacolor">
+                        <li >
+                            <a  asp-controller="Home" asp-action="NavCategory" asp-route-id="1">Classics</a>
+                        </li>
+                        <li >
+                            <a  asp-controller="Home" asp-action="NavCategory" asp-route-id="2">Kids</a>
+                        </li>
+                     
+                        <li >
+                            <a  asp-controller="Home" asp-action="NavCategory" asp-route-id="4">Romance</a>
+                        </li> 
+                        <li >
+                            <a  asp-controller="Home" asp-action="NavCategory" asp-route-id="5">Adventure</a>
+                        </li> 
+                         <li>
+                            <a  asp-controller="Home" asp-action="NavCategory" asp-route-id="6">Tragedy</a>
+                        </li>
+                         <li>
+                            <a  asp-controller="Home" asp-action="NavCategory" asp-route-id="7">Crime</a>
+                        </li>
+                           <li >
+                            <a  asp-controller="Home" asp-action="NavCategory" asp-route-id="8">Horror</a>
+                        </li>
+                         <li>
+                            <a  asp-controller="Home" asp-action="NavCategory" asp-route-id="9">Comics</a>
+                        </li>
+                         <li>
+                            <a  asp-controller="Home" asp-action="NavCategory" asp-route-id="10">Biography</a>
+                        </li>
+                         <li>
+                            <a  asp-controller="Home" asp-action="NavCategory" asp-route-id="11">Memoirs</a>
+                        </li>
+                         <li>
+                            <a  asp-controller="Home" asp-action="NavCategory" asp-route-id="12">humour</a>
+                        </li>
+                            <li>
+                            <a  asp-controller="Home" asp-action="NavCategory" asp-route-id="13">Sports</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+   
+        <div class="container full-container">
+     
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="page-content">
+        <main role="main">
+
+         
+            @RenderBody()
+        </main>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Do_Again - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/lib/jquery-validation/dist/jquery.validate.js" ></script>
+      <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" ></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/custom.js" asp-append-version="true"></script>
+            <script src="~/js/isotope.js" asp-append-version="true"></script>
+            <script src="~/js/isotope.min.js" asp-append-version="true"></script>
+                <script src="~/js/owl-carousel.js" asp-append-version="true"></script>
+                    <script src="~/js/popup.js" asp-append-version="true"></script>
+                        <script src="~/js/tabs.js" asp-append-version="true"></script>
+                        <script src="~/lib/fontawesome-iconpicker/js/fontawesome-iconpicker.js"asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
