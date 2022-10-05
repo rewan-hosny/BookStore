@@ -37,7 +37,7 @@ I made the site compatible with all sizes so that i can use it on all devices ea
 
 
 
-![This is an image](Do_Again/wwwroot/image/phone.png)
+![This is an image](Do_Again/wwwroot/image/res.png)
 
 
 # Built with
