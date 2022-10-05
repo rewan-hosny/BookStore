@@ -29,6 +29,7 @@ can control user and delete user
 ![This is an image](Do_Again/wwwroot/image/ad3.png)
 can add and control roles
 ![This is an image](Do_Again/wwwroot/image/ad5.png)
+can edit role and add or remove user's in admin list
 ![This is an image](Do_Again/wwwroot/image/ad4.png)
 
 # Responsive
