@@ -25,6 +25,7 @@ admin can create
 ![This is an image](Do_Again/wwwroot/image/ad6.png)
 can edit and delete book
 ![This is an image](Do_Again/wwwroot/image/ad7.png)
+can control user and delete user
 ![This is an image](Do_Again/wwwroot/image/ad3.png)
 ![This is an image](Do_Again/wwwroot/image/ad5.png)
 ![This is an image](Do_Again/wwwroot/image/ad4.png)
