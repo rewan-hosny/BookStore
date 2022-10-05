@@ -21,10 +21,13 @@ This e-commerce web application , Administrators have a panel where they can man
 When Admin enters, he is responsible for the process of adding books, managing users and roles, and deleting and modifying the product, so additional buttons appear to him that did not appear to the user.
 
 ![This is an image](Do_Again/wwwroot/image/ad1.png)
+admin can create 
+![This is an image](Do_Again/wwwroot/image/ad6.png)
+can edit and delete book
 ![This is an image](Do_Again/wwwroot/image/ad3.png)
 ![This is an image](Do_Again/wwwroot/image/ad5.png)
 ![This is an image](Do_Again/wwwroot/image/ad4.png)
-![This is an image](Do_Again/wwwroot/image/ad6.png)
+
 # Responsive
 I made the site compatible with all sizes and I can use it on all devices of different sizes
 
