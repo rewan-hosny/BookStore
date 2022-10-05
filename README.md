@@ -33,7 +33,7 @@ can edit role and add or remove user's in admin list
 ![This is an image](Do_Again/wwwroot/image/ad4.png)
 
 # Responsive
-I made the site compatible with all sizes and I can use it on all devices of different sizes
+I made the site compatible with all sizes so that i can use it on all devices easily
 
 
 
